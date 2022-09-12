@@ -30,7 +30,3 @@ public class EmailPattern {
         }
     }
 }
-   /* private static final String EMAIL_PATTERN ="^[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    private static final String NAME_PATTERN = "";
-    private static final String MOBILE_PATTERN = "^[]";
-    private static final String PASSWORD_PATTERN = "";*/
