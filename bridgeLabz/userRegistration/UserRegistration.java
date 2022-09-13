@@ -58,7 +58,7 @@ public class UserRegistration {
         String lName = sc.next();
         if(!validateName(fName) && validateName(lName)){
             flag = false;
-            System.out.println("Invalid Fist Name and last both should Start with caps and have minimum 2 characters");
+            System.out.println("Invalid Fist Name and last both should Start with caps and have minimum 3 characters");
         }
 
         System.out.println("Enter Email_Id");
