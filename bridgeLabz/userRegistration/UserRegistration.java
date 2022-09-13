@@ -50,18 +50,21 @@ public class UserRegistration {
     }
 
     public void fillUpUserDetails(){
+        boolean flag = true;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first name");
         String fName = sc.next();
         System.out.println("Enter last name");
         String lName = sc.next();
         if(!validateName(fName) && validateName(lName)){
+            flag = false;
             System.out.println("Invalid Fist Name and last both should Start with caps and have minimum 2 characters");
         }
 
         System.out.println("Enter Email_Id");
         String email = sc.next();
         if(!validateEmail(email)){
+            flag = false;
             System.out.println("Invalid Email_Id, Email should be in format of abc5@gmail.com or abc1.xyz2@yahoo.com.in");
         }
 
@@ -69,13 +72,18 @@ public class UserRegistration {
         System.out.println("Enter mobile no with country code");
         String mobileNo = sc.nextLine();
         if(!validateMobileNo(mobileNo)){
+            flag = false;
             System.out.println("Invalid mobile_No, Mobile no should start with country code as (country_code space numberHaving10Digit)");
         }
         sc = new Scanner(System.in);
         System.out.println("Enter password");
         String password = sc.next();
         if(!validatePassword(password)){
+            flag = false;
             System.out.println("Invalid password, password should contains 1 upper_Case, 1 lower_case, 1 special character and 1 digit");
+        }
+        if(flag){
+            System.out.println("User is successfully register");
         }
 
     }
