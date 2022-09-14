@@ -10,7 +10,7 @@ public class UserRegistration {
     //UC1,UC2
     private static final String NAME_PATTERN = "^\\p{Lu}([A-Za-z]{2,})";
     //UC3
-    private static final String EMAIL_PATTERN = "^[A-Za-z0-9\\.]+([A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9-]+)+(\\.[A-Za-z0-9-]+)*";
+    private static final String EMAIL_PATTERN = "^[A-Za-z0-9]+(\\.[A-Za-z0-9-]+)*@[A-Za-z]+(\\.[A-Za-z]+)+(\\.[A-Za-z]+)*";
     //UC4
     private static final String MOBILE_PATTERN = "^[0-9]{2}\\p{Space}[0-9]{10}";
     //UC5 UC6 UC7 UC8

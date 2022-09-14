@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class EmailPattern {
     private  Pattern pattern;
     private  Matcher matcher;
-    private static final String EMAIL_PATTERN = "^[A-Za-z0-9-\\+\\-\\_]+(\\.[A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)+(\\.[A-Za-z]{2,})*$";
+    private static final String EMAIL_PATTERN = "^[A-Za-z0-9-\\+\\-\\_]+(\\.[A-Za-z0-9-]+)*@[A-Za-z]+(\\.[A-Za-z]+)+(\\.[A-Za-z]{2,})*$";
 
     public void setEmailPattern(){
         pattern = Pattern.compile(EMAIL_PATTERN);
