@@ -11,16 +11,17 @@ public class MoodAnalyser {
     public String analyseMood(String msg){
         this.msg = msg.toLowerCase(Locale.ROOT);
         String[] words=msg.split("\\s");
+        if(words.length == 0){
+            return "INVALID INPUT";
+        }
         for(int i  = 0; i<words.length;i++){
             if (checkMoodIsSad(words[i])){
                 return "SAD";
             }else if (checkMoodIsHappy(words[i])){
                 return "HAPPY";
-            }else{
-                return "HAPPY";
             }
         }
-        return "INVALID INPUT";
+        return "HAPPY";
     }
 
     public boolean checkMoodIsSad(String msg){
