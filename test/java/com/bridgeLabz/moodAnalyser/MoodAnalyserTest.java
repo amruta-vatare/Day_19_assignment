@@ -35,7 +35,7 @@ public class MoodAnalyserTest {
         return Arrays.asList(new Object[][] {{"HAPPY","how happy she is!"},
                 {"SAD","how sad he is?"},
                 {"HAPPY","I am in any mood"},
-                {"INVALID INPUT"," "}});
+                {"HAPPY"," "}});
     }
 
 }
