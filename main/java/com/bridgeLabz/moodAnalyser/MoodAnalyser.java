@@ -17,9 +17,13 @@ public class MoodAnalyser {
     public String analyseMood(){
         msg = this.msg.toLowerCase(Locale.ROOT);
         String[] words=msg.split("\\s");
-        if(words.length == 0){
-            return "INVALID INPUT";
+
+        try { if(words.length == 0){throw new Exception();}
+        }catch (Exception e){
+            System.out.println("INVALID INPUT OF NULL STRING");
+            return "HAPPY";
         }
+
         for(int i  = 0; i<words.length;i++){
             if (checkMoodIsSad(words[i])){
                 return "SAD";
@@ -44,6 +48,6 @@ public class MoodAnalyser {
         System.out.println("Enter message");
         String msg  = sc.nextLine();
         MoodAnalyser analyser = new MoodAnalyser(msg);
-        System.out.println(analyser.analyseMood());
+        System.out.println("You are in "+analyser.analyseMood()+" mood");
     }
 }
