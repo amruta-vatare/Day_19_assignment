@@ -24,11 +24,11 @@ public class MoodAnalyserTest {
 
     @Before
     public void beforeEachInit(){
-        moodAnalyser = new MoodAnalyser();
+        moodAnalyser = new MoodAnalyser(msg);
     }
     @Test
     public void moodAnalyseTest(){
-        assertEquals(result,moodAnalyser.analyseMood(msg));
+        assertEquals(result,moodAnalyser.analyseMood());
     }
     @Parameterized.Parameters
     public static Collection moodAnalyseTestInputs(){
