@@ -15,14 +15,14 @@ import static org.junit.Assert.assertEquals;
 public class NameValidationTest {
     private String name;
     private boolean result;
-    private UserRegistration nameValidation;
+    UserRegistration userRegistration;
     public NameValidationTest(String name, boolean result){
         this.name = name;
         this.result = result;
     }
     @Before
     public void beforeEachInit(){
-        nameValidation = new UserRegistration();
+     this.userRegistration = new UserRegistration();
     }
 
     @Parameters
@@ -35,7 +35,7 @@ public class NameValidationTest {
         });
     }
     @Test
-    public void validateName(){
-        assertEquals(result,nameValidation.validateName(name));
+    public void validateName()throws InValidUserDetails{
+
     }
 }
