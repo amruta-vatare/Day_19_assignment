@@ -35,7 +35,7 @@ public class PasswordValidationTest {
         });
     }
     @Test
-    public void validatePassword(){
-        //assertEquals(result, passwordValidation.validatePassword(password));
+    public void validatePassword() throws InValidUserDetails {
+        assertEquals(result, passwordValidation.validatePassword.check(password));
     }
 }

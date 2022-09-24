@@ -37,7 +37,7 @@ public class Mob_NoValidationTest {
     }
 
     @Test
-    public void mobileValidation(){
-       // assertEquals(result,mobileValidation.validateMobileNo(mob_no));
+    public void mobileValidation() throws InValidUserDetails {
+       assertEquals(result,mobileValidation.validateMobileNo.check(mob_no));
     }
 }

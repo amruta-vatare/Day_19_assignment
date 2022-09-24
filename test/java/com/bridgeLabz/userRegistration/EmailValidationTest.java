@@ -36,7 +36,11 @@ public class EmailValidationTest {
         });
     }
     @Test
-    public void validateEmail(){
-       // assertEquals(result,emailValidation.validateEmail(email));
+    public void testValidateEmailExceptionIsThrown() throws InValidUserDetails {
+        emailValidation.validateEmail.check(email);
+    }
+    @Test
+    public void validateEmail() throws InValidUserDetails {
+       assertEquals(result,emailValidation.validateEmail.check(email));
     }
 }

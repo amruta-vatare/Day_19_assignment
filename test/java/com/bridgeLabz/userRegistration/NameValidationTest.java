@@ -36,6 +36,6 @@ public class NameValidationTest {
     }
     @Test
     public void validateName()throws InValidUserDetails{
-
+        assertEquals(result,userRegistration.validateFName.check(name));
     }
 }

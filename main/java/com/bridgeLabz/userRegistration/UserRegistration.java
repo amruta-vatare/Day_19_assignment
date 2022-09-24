@@ -49,81 +49,83 @@ public class UserRegistration {
         System.out.println("Enter password");
         this.password = sc.next();
     }
+
+    UserValidation validateFName =(fName)->{
+        try {
+            setNamePattern();
+            matcher = pattern.matcher(fName);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (NullPointerException e){
+            throw new InValidUserDetails("");
+        }
+    };
+    UserValidation validateLName =(lName)->{
+        try {
+            setNamePattern();
+            matcher = pattern.matcher(lName);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (NullPointerException e){
+            throw new InValidUserDetails("");
+        }
+    };
+
+    UserValidation validateEmail = (email)->{
+        try {
+            setEmailPattern();
+            matcher = pattern.matcher(email);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (NullPointerException e){
+            throw new InValidUserDetails("");
+        }
+    };
+    UserValidation validateMobileNo =(mobileNo)->{
+        try {
+            setMobilePattern();
+            matcher = pattern.matcher(mobileNo);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (NullPointerException e){
+            throw new InValidUserDetails("");
+        }
+
+    };
+    UserValidation validatePassword = (password)->{
+        try {
+            setPasswordPattern();
+            matcher = pattern.matcher(password);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (NullPointerException e){
+            throw new InValidUserDetails("");
+        }
+    };
+
     public static void main(String[] args)throws InValidUserDetails,NullPointerException {
 
         UserRegistration registration = new UserRegistration();
         System.out.println("Enter user details");
         registration.fillUpUserDetails();
 
-        UserValidation validateFName =(fName)->{
-            try {
-                setNamePattern();
-                matcher = pattern.matcher(fName);
-                if(matcher.matches()){
-                    return true;
-                }else{
-                    return false;
-                }
-            }catch (NullPointerException e){
-                throw new InValidUserDetails("");
-            }
-        };
-        UserValidation validateLName =(lName)->{
-            try {
-                setNamePattern();
-                matcher = pattern.matcher(lName);
-                if(matcher.matches()){
-                    return true;
-                }else{
-                    return false;
-                }
-            }catch (NullPointerException e){
-                throw new InValidUserDetails("");
-            }
-        };
-
-        UserValidation validateEmail = (email)->{
-            try {
-                setEmailPattern();
-                matcher = pattern.matcher(email);
-                if(matcher.matches()){
-                    return true;
-                }else{
-                    return false;
-                }
-            }catch (NullPointerException e){
-                throw new InValidUserDetails("");
-            }
-        };
-        UserValidation validateMobileNo =(mobileNo)->{
-            try {
-                setMobilePattern();
-                matcher = pattern.matcher(mobileNo);
-                if(matcher.matches()){
-                    return true;
-                }else{
-                    return false;
-                }
-            }catch (NullPointerException e){
-                throw new InValidUserDetails("");
-            }
-
-        };
-        UserValidation validatePassword = (password)->{
-            try {
-                setPasswordPattern();
-                matcher = pattern.matcher(password);
-                if(matcher.matches()){
-                    return true;
-                }else{
-                    return false;
-                }
-            }catch (NullPointerException e){
-                throw new InValidUserDetails("");
-            }
-        };
-        try {
-            if (!validateFName.check(fName) && !validateLName.check(lName)){
+        /*try {
+            if (!registration.validateFName.check(fName) && !registration.validateLName.check(lName)){
                 throw new InValidUserDetails("Invalid Fist Name and last both should Start with caps and have minimum 3 characters");
             }else if(!validateEmail.check(email)){
                 throw new InValidUserDetails("Invalid Email_Id, Email should be in format of abc5@gmail.com or abc1.xyz2@yahoo.com.in");
@@ -136,7 +138,7 @@ public class UserRegistration {
             }
         } catch (InValidUserDetails inValidUserDetails) {
             inValidUserDetails.printStackTrace();
-        }
+        }*/
 
     }
 }
