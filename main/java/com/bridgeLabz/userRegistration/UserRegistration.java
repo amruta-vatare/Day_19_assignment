@@ -124,21 +124,21 @@ public class UserRegistration {
         System.out.println("Enter user details");
         registration.fillUpUserDetails();
 
-        /*try {
+        try {
             if (!registration.validateFName.check(fName) && !registration.validateLName.check(lName)){
                 throw new InValidUserDetails("Invalid Fist Name and last both should Start with caps and have minimum 3 characters");
-            }else if(!validateEmail.check(email)){
+            }else if(!registration.validateEmail.check(email)){
                 throw new InValidUserDetails("Invalid Email_Id, Email should be in format of abc5@gmail.com or abc1.xyz2@yahoo.com.in");
-            }else if(!validateMobileNo.check(mobileNo)){
+            }else if(!registration.validateMobileNo.check(mobileNo)){
                 throw new InValidUserDetails("Invalid mobile_No, Mobile no should start with country code as (country_code space numberHaving10Digit)");
-            }else if(!validatePassword.check(password)){
+            }else if(!registration.validatePassword.check(password)){
                 throw new InValidUserDetails("Invalid password, password should contains 1 upper_Case, 1 lower_case, 1 special character and 1 digit");
             }else {
                 System.out.println("User is successfully register");
             }
         } catch (InValidUserDetails inValidUserDetails) {
             inValidUserDetails.printStackTrace();
-        }*/
+        }
 
     }
 }
